@@ -7,18 +7,12 @@ import { User } from './user.model.ts';
   styleUrls: ['./address-card.component.css']
 })
 export class AddressCardComponent implements OnInit {
-  user: any;
-  @Input('user') userobj:User='Temp';
+  
+  @Input('user') user:User='Temp';
   constructor() { }
 
   ngOnInit() {
-    this.user = {
-      name : this.userobj.name,
-      title : this.userobj.designation,
-      address : this.userobj.address,
-      phone : this.userobj.phone,
-
-    }
+    
   }
 
 }
