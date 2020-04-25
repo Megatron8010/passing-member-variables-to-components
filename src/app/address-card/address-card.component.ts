@@ -7,10 +7,12 @@ import { User } from './user.model.ts';
   styleUrls: ['./address-card.component.css']
 })
 export class AddressCardComponent implements OnInit {
-  
+  isCollapsed: boolean = true;
   @Input('user') user:User='Temp';
   constructor() { }
-
+  toggleCollapse(){
+    this.isCollapsed=!this.isCollapsed
+  }
   ngOnInit() {
     
   }
